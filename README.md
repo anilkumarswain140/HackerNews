@@ -52,6 +52,9 @@ Follow these steps to set up the application on your local machine:
 
 2. **Open Your Web Browser**: Open your preferred web browser and go to [http://localhost:4200](http://localhost:4200) to view the application. You should see the Hacker News Post Viewer interface, displaying the latest posts.
 
+## App is Live on this URL  
+https://hackernews-1a522--pr3-dev-mc2813d8.web.app/
+
 ## Usage
 
 - Upon loading the application, it will automatically fetch and display the latest posts from Hacker News.
