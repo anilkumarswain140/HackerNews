@@ -1,0 +1,40 @@
+.border-bottom {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.post-title {
+    color: black; 
+    font-size: 12pt;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.post-info{
+    color: black;
+    font-size: 10pt;
+    font-weight: lighter;
+    margin-left: 4%;
+}
+.post-title-url-container {
+    display: flex;
+    align-items: center;
+}
+.post-items-container{
+    background-color: #f6f6ef; 
+    color: black;
+}
+.post-url {
+    color: black;
+    font-size: 10pt;
+    font-weight: lighter;
+    margin-left: auto;
+    cursor: pointer;
+    text-decoration: none;
+}
+.post-url:hover{
+    text-decoration: underline;
+}
+.serial-number {
+    width: 40px; 
+    display: inline-block;
+    text-align: right;
+}

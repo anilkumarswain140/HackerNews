@@ -1,0 +1,12 @@
+<main class="container post-items-container my-4">
+    <div class="border-bottom py-3">
+        <span class="serial-number">{{ serialNumber }}. </span>
+        <a [href]="post.url" target="_blank" rel="noopener noreferrer" class="h5 text-decoration-none post-title">
+            {{ post.title }}
+        </a>
+        <a class="post-url" (click)="onDomainClick(post.url)" *ngIf="post.url">({{post.url | domain}})</a>
+        <div class="post-info">
+            by {{ post.by }} | {{ post.time * 1000 | date:'medium' }}
+        </div>
+    </div>
+</main>

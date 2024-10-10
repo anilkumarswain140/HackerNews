@@ -1,0 +1,7 @@
+<div>
+    <app-post-item *ngFor="let post of posts; let i = index" [post]="post" [serialNumber]="i + 1" (domainClicked)="onDomainClick($event)"></app-post-item>
+    <div #anchor class="text-center py-3" *ngIf="!isLoading">
+        Loading more posts...
+    </div>
+</div>
+<div #anchor></div>
