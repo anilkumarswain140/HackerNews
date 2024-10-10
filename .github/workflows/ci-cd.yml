@@ -5,8 +5,8 @@ env:
 
 on:
   push:
-    branches-ignore:
-      - master  # Ignore direct pushes to the main branch to avoid conflicts
+    branches:
+      - master # Ignore direct pushes to the main branch to avoid conflicts
 
 jobs:
   Deploy-Preview:
