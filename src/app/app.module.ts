@@ -7,6 +7,7 @@ import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import {HttpClientModule} from '@angular/common/http'
 import { DomainPipe } from './shared/domain.pipe';
+import { HackernewsService } from './services/hackernews.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,7 @@ import { DomainPipe } from './shared/domain.pipe';
     AppRoutingModule,
     HttpClientModule 
   ],
-  providers: [],
+  providers: [HackernewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

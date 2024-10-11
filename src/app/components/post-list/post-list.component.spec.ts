@@ -3,7 +3,8 @@ import { PostListComponent } from './post-list.component';
 import { HackernewsService } from '../../services/hackernews.service';
 import { of } from 'rxjs';
 import { ElementRef } from '@angular/core';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { PostItemComponent } from '../post-item/post-item.component';
 // Mock the HackernewsService
 class MockHackernewsService {
   getNewPostIds() {
@@ -23,7 +24,8 @@ describe('PostListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PostListComponent],
+      declarations: [PostListComponent,PostItemComponent],
+      imports: [HttpClientTestingModule],
       providers: [
         { provide: HackernewsService, useClass: MockHackernewsService } // Use the mock service
       ]
@@ -32,6 +34,7 @@ describe('PostListComponent', () => {
     fixture = TestBed.createComponent(PostListComponent);
     component = fixture.componentInstance;
     hackernewsService = TestBed.inject(HackernewsService);
+    
   });
 
   beforeEach(() => {
@@ -63,6 +66,8 @@ describe('PostListComponent', () => {
     component.observeLastPost(); // Call observeLastPost
 
     const observer = component['observer']; // Access the private observer property
+    console.log(component);
+    
     expect(observer).toBeDefined(); // Expect the observer to be defined
   });
 });
