@@ -23,10 +23,10 @@ export class PostListComponent implements OnInit {
   constructor(private hackernewsService: HackernewsService, @Inject(PLATFORM_ID) private platformId: Object, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.fetchPostIds();
+    this.FetchPostIds();
   }
 
-  fetchPostIds(): void {
+  FetchPostIds(): void {
     this.hackernewsService.getNewPostIds().subscribe(ids => {
       this.postIds = ids;
       this.loadMorePosts();  // Load the first batch of posts
