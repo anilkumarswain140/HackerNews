@@ -55,6 +55,10 @@ Follow these steps to set up the application on your local machine:
 ## App is Live on this URL  
 https://hackernews-1a522--pr3-dev-mc2813d8.web.app/
 
+
+## Video documentation for codebase overview
+https://drive.google.com/file/d/158Aldmqpm2Jc67SKo7Q8ZV5QUOE13k7u/view?usp=sharing
+
 ## Usage
 
 - Upon loading the application, it will automatically fetch and display the latest posts from Hacker News.

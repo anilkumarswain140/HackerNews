@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,     // Browser global variables
+    "es6": true          // Enable ES6 features
+  },
+  "extends": [
+    "eslint:recommended" // Use recommended rules from ESLint
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021, // Use the latest ECMAScript version
+    "sourceType": "module" // Allow the use of import/export
+  },
+  "rules": {
+    "no-console": "warn", // Warn on console.log statements
+    "no-unused-vars": [
+      "warn",             // Warn for unused variables
+      { "argsIgnorePattern": "^_" } // Ignore unused variables that start with _
+    ],
+    "semi": [
+      "error",           // Require semicolons at the end of statements
+      "always"
+    ],
+    "indent": [
+      "error",           // Enforce consistent indentation
+      2                  // Set indent to 2 spaces
+    ]
+  }
+}
