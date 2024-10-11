@@ -52,6 +52,56 @@ Follow these steps to set up the application on your local machine:
 
 2. **Open Your Web Browser**: Open your preferred web browser and go to [http://localhost:4200](http://localhost:4200) to view the application. You should see the Hacker News Post Viewer interface, displaying the latest posts.
 
+
+# Implemention of Firebase GitHub Action CI/CD 
+
+CI/CD done for automatic deployments
+
+This document provides an overview of enabling Continuous Integration and Continuous Deployment (CI/CD) for an Angular project using Firebase and GitHub Actions.
+
+## Overview
+
+Integrating Firebase with GitHub Actions allows you to automate the deployment of your Angular application whenever changes are pushed to your repository. This setup ensures that your application is always up-to-date and minimizes the risk of human error during deployment.
+
+### Benefits of CI/CD
+
+- **Automation**: Automatically deploy your app on every push to the main branch.
+- **Consistency**: Ensure that the same deployment process is followed every time.
+- **Speed**: Reduce the time from code commit to deployment.
+- **Reliability**: Minimize deployment errors and ensure that the application is tested before deployment.
+
+## Prerequisites
+
+1. **Firebase Account**: Ensure you have a Firebase project set up.
+2. **Firebase CLI**: Install the Firebase CLI on your local machine.
+3. **GitHub Repository**: Your Angular project should be hosted on GitHub.
+
+## Steps to Enable CI/CD with GitHub Actions
+
+1. **Set Up Firebase in Your Angular Project**:
+   - Install Firebase and AngularFire in your Angular project:
+     ```bash
+     ng add @angular/fire
+     ```
+   - Configure Firebase in your application using the Firebase configuration object.
+
+2. **Create Firebase Hosting Configuration**:
+   - Run the following command to initialize Firebase Hosting:
+     ```bash
+     firebase init hosting
+     ```
+   - Follow the prompts to set up hosting for your project.
+
+3. **Add Firebase Service Account to GitHub Secrets**:
+   - Go to your Firebase console, navigate to **Project Settings** > **Service accounts**, and generate a new private key.
+   - Save the key as JSON and add it to your GitHub repository secrets (under **Settings** > **Secrets and variables** > **Actions**). Name it `FIREBASE_SERVICE_ACCOUNT`.
+
+4. **Triggering the Workflow**:
+   - Once set up, the workflow is triggered automatically on every push to the main branch. Check the **Actions** tab in your GitHub repository to monitor the workflow progress and logs.
+
+# Alternative to deploy 
+  Just push your changes to Github branch the Github action will trigger automatic deployment 
+
 ## App is Live on this URL  
 https://hackernews-1a522--pr3-dev-mc2813d8.web.app/
 
