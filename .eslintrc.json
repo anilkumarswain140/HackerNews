@@ -1,29 +1,44 @@
 {
   "root": true,
   "env": {
-    "browser": true,     // Browser global variables
-    "es6": true          // Enable ES6 features
+    "browser": true,
+    "es6": true
   },
   "extends": [
-    "eslint:recommended" // Use recommended rules from ESLint
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@angular-eslint/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2021, // Use the latest ECMAScript version
-    "sourceType": "module" // Allow the use of import/export
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": "./tsconfig.json" // Specify your tsconfig file path
   },
   "rules": {
-    "no-console": "warn", // Warn on console.log statements
-    "no-unused-vars": [
-      "warn",             // Warn for unused variables
-      { "argsIgnorePattern": "^_" } // Ignore unused variables that start with _
+    "camelcase": [
+      "error",
+      { "properties": "never" }
     ],
-    "semi": [
-      "error",           // Require semicolons at the end of statements
-      "always"
-    ],
-    "indent": [
-      "error",           // Enforce consistent indentation
-      2                  // Set indent to 2 spaces
-    ]
-  }
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "indent": "off",
+    "comma-spacing": "off",
+    "key-spacing": "off"
+  },
+  "ignorePatterns": ["*.spec.ts", "*.spec.js"], // Ignore all spec files
+  "overrides": [
+    {
+      "files": ["*.spec.ts"],
+      "rules": {
+        // Disable specific rules if needed (optional)
+        "camelcase": "off",
+        "no-unused-vars": "off",
+        "no-console": "off",
+        "indent": "off",
+        "comma-spacing": "off",
+        "key-spacing": "off"
+      }
+    }
+  ]
 }

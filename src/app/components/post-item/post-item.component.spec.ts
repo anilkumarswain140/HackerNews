@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PostItemComponent } from './post-item.component';
 import { Post } from '../../models/post.model';
 import { By } from '@angular/platform-browser';
+import { DomainPipe } from 'src/app/shared/domain.pipe';
 
 describe('PostItemComponent', () => {
   let component: PostItemComponent;
@@ -9,7 +10,7 @@ describe('PostItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostItemComponent ]
+      declarations: [ PostItemComponent,DomainPipe ]
     })
     .compileComponents();
   });
